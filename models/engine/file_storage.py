@@ -50,6 +50,8 @@ class FileStorage:
             pass
     
     def delete(self, obj=None):
-        """Deletes obj from __objects if it's inside."""
-        if obj is not None and obj in self.__objects:
-            self.__objects.remove(obj)
+        """Delete an existing element."""
+        if obj:
+            key = f"{type(obj).__name__}.{obj.id}"
+            if key in self.__objects:
+                del self.__objects[key]
