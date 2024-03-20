@@ -49,9 +49,9 @@ class FileStorage:
         except FileNotFoundError:
             pass
     
-    def delete(self, obj=None):
-        """Delete an existing element."""
+    ef delete(self, obj=None):
+        """ delete an existing element
+        """
         if obj:
-            key = f"{type(obj).__name__}.{obj.id}"
-            if key in self.__objects:
-                del self.__objects[key]
+            key = "{}.{}".format(type(obj).__name__, obj.id)
+            del self.__objects[key]
