@@ -7,6 +7,8 @@ class FileStorage:
     """This class manages storage of hbnb models in JSON format"""
     __file_path = 'file.json'
     __objects = {}
+class MyClass:
+    __objects = {}
 
     def all(self, cls=None):
         """Returns the list of objects of one type of class."""
