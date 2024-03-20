@@ -49,7 +49,7 @@ class FileStorage:
         except FileNotFoundError:
             pass
     
-    ef delete(self, obj=None):
+    def delete(self, obj=None):
         """ delete an existing element
         """
         if obj:
